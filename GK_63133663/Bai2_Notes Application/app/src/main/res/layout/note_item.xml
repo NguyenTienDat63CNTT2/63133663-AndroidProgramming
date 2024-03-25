@@ -20,5 +20,5 @@
         android:id="@+id/contentTextView"
         android:layout_marginTop="4dp"
         android:text="Content Text"/>
-
 </LinearLayout>
+
