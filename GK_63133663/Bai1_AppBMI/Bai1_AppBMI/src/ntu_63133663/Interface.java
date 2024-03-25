@@ -35,6 +35,7 @@ public class Interface extends JFrame {
 	JButton btnClear;
 	JButton btnExit;
 	JLabel lblNewLabel_2;
+	JLabel iconBMI;
 	/**
 	 * Launch the application.
 	 */
@@ -76,15 +77,26 @@ public class Interface extends JFrame {
 		panel = new JPanel();
 		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel.setBackground(new Color(230, 230, 250));
-		panel.setBounds(0, 0, 700, 89);
+		panel.setBounds(0, 0, 710, 89);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		lblNewLabel = new JLabel("Body Mass Index");
-		lblNewLabel.setForeground(new Color(0, 0, 255));
+		lblNewLabel.setForeground(new Color(0, 128, 0));
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 35));
-		lblNewLabel.setBounds(207, 14, 289, 64);
+		lblNewLabel.setBounds(239, 11, 289, 64);
 		panel.add(lblNewLabel);
+		
+		iconBMI = new JLabel("");
+		iconBMI.setBounds(163, 11, 66, 51);
+		panel.add(iconBMI);
+		
+	    String iconBmiPath = "C:\\Users\\PC\\Desktop\\bmi-icon-6.png";
+	    int iconWidth = iconBMI.getWidth(); // Get the width of the JLabel
+	    int iconHeight = iconBMI.getHeight(); // Get the height of the JLabel
+
+	    ImageIcon imageIconBMI = resizeIcon(iconBmiPath, iconWidth, iconHeight);
+	    iconBMI.setIcon(imageIconBMI);
 		
 		panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
@@ -121,6 +133,7 @@ public class Interface extends JFrame {
 		panel_1.add(textField_1);
 		
 		textField_2 = new JTextField();
+		textField_2.setEnabled(false);
 		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_2.setColumns(10);
 		textField_2.setBounds(211, 179, 96, 34);
