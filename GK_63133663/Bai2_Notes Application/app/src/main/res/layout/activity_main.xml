@@ -12,10 +12,14 @@
     <EditText
         android:id="@+id/titleEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="46dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_bg"
         android:hint="Note Title"/>
 
     <EditText
+        android:background="@drawable/edittext_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Note Content"
