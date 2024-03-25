@@ -64,6 +64,7 @@ public class Interface extends JFrame {
 	}
 	
 	public Interface() {
+		setTitle("Body Mass Index");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 724, 810);
 		contentPane = new JPanel();
