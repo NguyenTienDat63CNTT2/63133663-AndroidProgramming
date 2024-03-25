@@ -24,7 +24,17 @@ public class Interface extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-
+	JPanel panel;
+	JLabel lblNewLabel;
+	JPanel panel_1;
+	JLabel lblNewLabel_1;
+	JLabel lblNewLabel_1_1;
+	JLabel lblNewLabel_1_2;
+	JButton btnNewButton;
+	JLabel lblNewLabel_3;
+	JButton btnClear;
+	JButton btnExit;
+	JLabel lblNewLabel_2;
 	/**
 	 * Launch the application.
 	 */
@@ -62,37 +72,37 @@ public class Interface extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel.setBackground(new Color(211, 211, 211));
 		panel.setBounds(0, 0, 710, 168);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = 	new JLabel("Body Mass Index");
+		lblNewLabel = new JLabel("Body Mass Index");
 		lblNewLabel.setForeground(new Color(0, 0, 255));
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 35));
 		lblNewLabel.setBounds(216, 52, 289, 64);
 		panel.add(lblNewLabel);
 		
-		JPanel panel_1 = new JPanel();
+		panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel_1.setBackground(new Color(211, 211, 211));
 		panel_1.setBounds(10, 179, 689, 374);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Height(m):");
+		lblNewLabel_1 = new JLabel("Height(m):");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1.setBounds(101, 60, 117, 40);
 		panel_1.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Weight(kg):");
+		lblNewLabel_1_1 = new JLabel("Weight(kg):");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1_1.setBounds(101, 122, 117, 33);
 		panel_1.add(lblNewLabel_1_1);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("BMI");
+		lblNewLabel_1_2 = new JLabel("BMI");
 		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_1_2.setBounds(131, 175, 87, 36);
 		panel_1.add(lblNewLabel_1_2);
@@ -112,16 +122,59 @@ public class Interface extends JFrame {
 		textField_2.setBounds(228, 180, 96, 34);
 		panel_1.add(textField_2);
 		
-		JButton btnNewButton = new JButton("Calculate");
-		btnNewButton.setBounds(385, 284, 77, 35);
+		btnNewButton = new JButton("Calculate");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double h = Double.parseDouble(textField.getText());
+				double w = Double.parseDouble(textField_1.getText());
+				
+				double bmi = w / (h* h);
+				
+				String cal = String.format("%.2f",bmi);
+				textField_2.setText(cal);
+				
+				if(bmi<=18.5)
+				{
+					textField_2.setOpaque(true);
+					textField_2.setBackground(Color.orange);
+					lblNewLabel_3.setForeground(Color.orange);
+					lblNewLabel_3.setText("UnderWeight");
+				}
+				else if(bmi<=24.9)
+				{
+					textField_2.setOpaque(true);
+					textField_2.setBackground(Color.green);
+					lblNewLabel_3.setForeground(Color.green);
+					lblNewLabel_3.setText("Healthy");
+				}
+				else if(bmi<=29.9)
+				{
+					textField_2.setOpaque(true);
+					textField_2.setForeground(Color.white);
+					textField_2.setBackground(Color.blue);
+					lblNewLabel_3.setForeground(Color.blue);
+					lblNewLabel_3.setText("OverWeight");
+				}
+				else if(bmi>30)
+				{
+					textField_2.setOpaque(true);
+					textField_2.setBackground(Color.red);
+					lblNewLabel_3.setForeground(Color.red);
+					lblNewLabel_3.setText("Obese");
+				}
+
+
+			}
+		});
+		btnNewButton.setBounds(366, 284, 96, 35);
 		panel_1.add(btnNewButton);
 		
-		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNewLabel_3.setBounds(385, 179, 124, 33);
 		panel_1.add(lblNewLabel_3);
 		
-		JButton btnClear = new JButton("Clear");
+		btnClear = new JButton("Clear");
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText("");
@@ -136,7 +189,7 @@ public class Interface extends JFrame {
 		btnClear.setBounds(467, 284, 71, 35);
 		panel_1.add(btnClear);
 		
-		JButton btnExit = new JButton("Exit");
+		btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
@@ -146,7 +199,7 @@ public class Interface extends JFrame {
 		panel_1.add(btnExit);
 		
 		
-		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(10, 564, 689, 280);
 		contentPane.add(lblNewLabel_2);
 	    // Replace "path/to/your/image.jpg" with the actual path to your image file
