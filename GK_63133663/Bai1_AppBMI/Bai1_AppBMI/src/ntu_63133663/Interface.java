@@ -109,20 +109,20 @@ public class Interface extends JFrame {
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		textField.setBounds(228, 60, 250, 34);
+		textField.setBounds(211, 66, 250, 34);
 		panel_1.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_1.setColumns(10);
-		textField_1.setBounds(228, 125, 250, 34);
+		textField_1.setBounds(211, 124, 250, 34);
 		panel_1.add(textField_1);
 		
 		textField_2 = new JTextField();
 		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_2.setColumns(10);
-		textField_2.setBounds(228, 180, 96, 34);
+		textField_2.setBounds(211, 179, 96, 34);
 		panel_1.add(textField_2);
 		
 		btnNewButton = new JButton("Calculate");
