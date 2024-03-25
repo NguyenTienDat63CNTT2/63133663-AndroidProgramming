@@ -133,7 +133,7 @@ public class Interface extends JFrame {
 		panel_1.add(textField_1);
 		
 		textField_2 = new JTextField();
-		textField_2.setEnabled(false);
+		textField_2.setEditable(false);
 		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_2.setColumns(10);
 		textField_2.setBounds(211, 179, 96, 34);
