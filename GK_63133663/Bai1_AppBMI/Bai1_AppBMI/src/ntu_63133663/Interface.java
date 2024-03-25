@@ -55,7 +55,7 @@ public class Interface extends JFrame {
 	
 	public Interface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 724, 889);
+		setBounds(100, 100, 724, 890);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -69,10 +69,10 @@ public class Interface extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Body Mass Index");
-		lblNewLabel.setForeground(new Color(138, 43, 226));
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblNewLabel.setBounds(242, 45, 239, 64);
+		JLabel lblNewLabel = 	new JLabel("Body Mass Index");
+		lblNewLabel.setForeground(new Color(0, 0, 255));
+		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 35));
+		lblNewLabel.setBounds(216, 52, 289, 64);
 		panel.add(lblNewLabel);
 		
 		JPanel panel_1 = new JPanel();
@@ -121,6 +121,11 @@ public class Interface extends JFrame {
 		panel_1.add(btnClear);
 		
 		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		btnExit.setBounds(548, 284, 65, 35);
 		panel_1.add(btnExit);
 		
