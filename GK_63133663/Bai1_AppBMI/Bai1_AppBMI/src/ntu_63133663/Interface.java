@@ -65,7 +65,7 @@ public class Interface extends JFrame {
 	
 	public Interface() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 724, 890);
+		setBounds(100, 100, 724, 810);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -74,21 +74,21 @@ public class Interface extends JFrame {
 		
 		panel = new JPanel();
 		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		panel.setBackground(new Color(211, 211, 211));
-		panel.setBounds(0, 0, 710, 168);
+		panel.setBackground(new Color(230, 230, 250));
+		panel.setBounds(0, 0, 700, 89);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		lblNewLabel = new JLabel("Body Mass Index");
 		lblNewLabel.setForeground(new Color(0, 0, 255));
 		lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 35));
-		lblNewLabel.setBounds(216, 52, 289, 64);
+		lblNewLabel.setBounds(207, 14, 289, 64);
 		panel.add(lblNewLabel);
 		
 		panel_1 = new JPanel();
 		panel_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		panel_1.setBackground(new Color(211, 211, 211));
-		panel_1.setBounds(10, 179, 689, 374);
+		panel_1.setBackground(new Color(230, 230, 250));
+		panel_1.setBounds(10, 100, 689, 374);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -171,7 +171,7 @@ public class Interface extends JFrame {
 		
 		lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel_3.setBounds(385, 179, 124, 33);
+		lblNewLabel_3.setBounds(330, 180, 124, 33);
 		panel_1.add(lblNewLabel_3);
 		
 		btnClear = new JButton("Clear");
@@ -200,7 +200,7 @@ public class Interface extends JFrame {
 		
 		
 		lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(10, 564, 689, 280);
+		lblNewLabel_2.setBounds(11, 485, 689, 280);
 		contentPane.add(lblNewLabel_2);
 	    // Replace "path/to/your/image.jpg" with the actual path to your image file
 	    String imagePath = "C:\\Users\\\\PC\\Desktop\\bmi2.jpg";
