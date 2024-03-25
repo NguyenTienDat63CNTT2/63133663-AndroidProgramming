@@ -108,16 +108,19 @@ public class Interface extends JFrame {
 		panel_1.add(lblNewLabel_1_2);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField.setBounds(228, 60, 250, 34);
 		panel_1.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_1.setColumns(10);
 		textField_1.setBounds(228, 125, 250, 34);
 		panel_1.add(textField_1);
 		
 		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textField_2.setColumns(10);
 		textField_2.setBounds(228, 180, 96, 34);
 		panel_1.add(textField_2);
@@ -170,7 +173,7 @@ public class Interface extends JFrame {
 		panel_1.add(btnNewButton);
 		
 		lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel_3.setBounds(330, 180, 124, 33);
 		panel_1.add(lblNewLabel_3);
 		
