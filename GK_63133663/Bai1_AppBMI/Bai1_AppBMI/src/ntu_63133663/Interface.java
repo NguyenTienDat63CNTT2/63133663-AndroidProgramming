@@ -116,7 +116,23 @@ public class Interface extends JFrame {
 		btnNewButton.setBounds(385, 284, 77, 35);
 		panel_1.add(btnNewButton);
 		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_3.setBounds(385, 179, 124, 33);
+		panel_1.add(lblNewLabel_3);
+		
 		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText("");
+				textField_1.setText("");
+				textField_2.setText("");
+				textField_2.setOpaque(true);
+				textField_2.setBackground(null);
+				lblNewLabel_3.setText("");
+
+			}
+		});
 		btnClear.setBounds(467, 284, 71, 35);
 		panel_1.add(btnClear);
 		
@@ -129,10 +145,6 @@ public class Interface extends JFrame {
 		btnExit.setBounds(548, 284, 65, 35);
 		panel_1.add(btnExit);
 		
-		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel_3.setBounds(385, 179, 124, 33);
-		panel_1.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(10, 564, 689, 280);
